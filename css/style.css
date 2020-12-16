@@ -17,6 +17,14 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 }
+ 
+  /* The sticky class is added to the header with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+
 .search-input {
 padding: 5px 30px 5px 12px;
 width: 100%;
@@ -27,6 +35,7 @@ border-radius: 4px;
 background-image: url(../img/Vector.svg);
 background-repeat: no-repeat;
 background-position: right 12px center;
+outline: none;
 }
 .navigation {
     display: flex;
@@ -191,6 +200,7 @@ align-items:flex-start;
 .create-post-input{
     padding-top: 8px;
     width: 100%;
+    outline: none;
 }
 .tag {
     background: #F5F5F5;
@@ -200,6 +210,7 @@ align-items:flex-start;
     display: flex;
     align-items: center;
     margin-right: 8px;
+    cursor: pointer;
 }
 .tag-icon{
     margin-right: 8px;
@@ -232,6 +243,7 @@ margin-bottom: 16px;
 .post-header-button{
     background-color: #fff;
     border: none;
+    cursor: pointer;
 }
 .post-header .user-avatar{
     width: 48px;
@@ -307,15 +319,11 @@ max-width: 100%;
 }
 .post-button{
     background-color: #fff;
-    border:none;
+    border: none;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
-/*.post-button:active{
-    color:#1890FF;
-    transition: color 0s;
-}
-*/
 .post-button-text{
     font-weight: 400;
     font-size: 14px;
